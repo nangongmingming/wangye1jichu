@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- 版本 -->
+
+<html>
+<head>
+<!-- 头文件： 编码   搜索引擎 样式文件css JS文件 -->
+<meta charset="UTF-8">
+<!-- 编码格式 -->
+<title>基本元素</title>
+<!-- 标题 -->
+<style type="text/css">
+table, tr, td {
+	/*边框1.像素宽 实线 红色*/
+	border: 1px solid green;
+	/* 格子间间隔调整 */
+	border-spacing：0px;
+}
+
+table {
+	width: 300px;
+	height: 100px;
+	font-size: 20px;
+	text-align: center;
+}
+/* 样式表 */
+</style>
+</head>
+<body>
+	<!-- 网页的内容 如：文本标签 -->
+	<h1>>>文本标签</h1>
+	<h1>沁园春.雪</h1>
+	<p>北国风光，千里冰封，万里雪飘</p>
+	<hr>
+	<h1>>>表格标签</h1>
+	<!--     表格由行列组成，可以分为表头，表体，表尾三部分 -->
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr>
+				<td>第1行第1列</td>
+				<td>第1行第2列</td>
+			</tr>
+			<tr>
+				<td>第2行第1列</td>
+				<td>第2行第2列</td>
+			</tr>
+		</tbody>
+		<tfoot></tfoot>
+	</table>
+	<hr>
+	<h1>>>表单标签</h1>
+	<!--     表单标签是用来向后台或者服务端发送或者提交数据
+action：数据提交目的地
+method：数据提交方式，get和post方式 -->
+	<form action="" method="">
+		用户名：<input type="text"><br> 密码：<input type="password"><br>
+		<!-- name属性表示向后台提交时候的参数名称，用来连接多个单选框形成单选效果,或者链接多个多选框形成一组多选效果-->
+		性别：男<input name="sex" type="radio"> 女<input name="sex"type="radio"><br> 
+		爱好：电影<input type="checkbox">游戏<inputtype="checkbox"><br> 
+		<input type="submit" value="提交"><br>
+	</form>
+	<hr>
+	<h1>>>自作表格表单整合</h1>
+	   <h2>注册页面</h2>
+	<table><form action="" method="">
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password"></td>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td>男<input name="sex" type="radio"> 女<input name="sex"type="radio"></td>
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td>电影<input type="checkbox">游戏<input type="checkbox"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="提交"></td>	
+		</tr>
+    </form>
+	</table>
+	<hr>
+	<h1>>>表格表单整合</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

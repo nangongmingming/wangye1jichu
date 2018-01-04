@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>看看你的运气分</title>
+<style type="text/css">
+
+table, th{
+	/*边框1.像素宽 实线 红色*/
+	border: 1px solid green;
+	/* 格子间间隔调整 */
+	border-spacing: 10px；
+}
+table{
+   width :500px;
+}
+/* div{
+ border:1px solid black;
+} */
+#table,#right{
+width:500px;
+float:left;
+}
+#right{
+  margin-left:100px;
+}
+#all{
+  width:1500px;
+  margin:100px 500px;
+}
+
+/* 空格表示选择前一个元素的子孙元素 */
+table img{
+  height=80px;
+}
+</style>
+<!-- 引入写好的就是文件 -->
+<script type="text/javascript" src ="jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	//给a标签绑定一个单机事件
+	$("a").click(function(){
+		//点击之后可以重复的切换显示数字和图片
+		var a=$(this)
+		//使用定时器来进行重复操作
+		//FUNc重复操作  第一个50重复操作执行间隔
+		//第二个50代表隔多久启动定时器
+		//时间执行间隔为毫秒MS
+		var i = 0;
+		var id = setInterval(function(){
+			//产生一个随机分数
+			var number = parseInt(Math.random()*90);
+			$("font").html(number);
+			i++;
+			//number是0-90之间，number/10为0-8.9999
+			var imgName="images/"+(parseInt(number/10)+1)+".jpg";
+			$("#tp").attr("src",imgName);
+			if(i==50){
+				clearInterval(id);0
+				a.parent().prev().prev().html(number);
+				a.parent().prev().find("img").attr("src",imgName);
+				//查找子孙元素
+			}
+		},30,30);
+		
+	});
+});
+</script>
+</head>
+<body>
+	<div id="all">
+		<div id="table">
+		<table>
+		
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>运气</th>
+				<th>图鉴</th>
+				<th>操作</th>
+			</tr>
+             <tr>
+				<th>1</th>
+				<th>爱新觉罗溥仪</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a>
+				</th>
+			</tr>
+			<tr>
+				<th>2</th>
+				<th>路明非</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a></th>
+			</tr>
+		   <tr>
+				<th>3</th>
+				<th>宇都宫紫苑</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a></th>
+			</tr>
+			<tr>
+				<th>4</th>
+				<th>希特勒</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a></th>
+			</tr>
+			<tr>
+				<th>5</th>
+				<th>小布什</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a></th>
+			</tr>
+			<tr>
+				<th>6</th>
+				<th>拿破仑</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a></th>
+			</tr>
+			<tr>
+				<th>7</th>
+				<th>普京</th>
+				<th></th>
+				<th><img alt="" src=""></th>
+				<th><a href="javascript:;">打分</a></th>
+			</tr>
+			
+			</table>
+		</div>
+		<div id = "right">
+		<p>分数：<font color = "red"  size= "50px">0</font>    </p>
+		<img id="tp" width="200px" alt="不好意思没有了" src="">
+		</div>
+	</div>
+</body>
+</html>

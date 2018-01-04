@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>let's go</title>
+<style type="text/css">
+table, th, td{
+	/*边框1.像素宽 实线 红色*/
+	border: 1px solid green;
+	/* 格子间间隔调整 */
+	border-spacing: 10px；
+}
+
+table {
+	width: 300px;
+	height: 100px;
+	font-size: 20px;
+	text-align: center;
+}
+/* 中括号表示元素属性及属性值 */
+input[type='text'],input[type='password'],input[type='email']{
+ background-color: pink;
+ width:97%;
+}
+/* 第一列 */
+td:first-child {
+	text-align: right;
+/* 	文本在右 */
+}
+/* p和h元素自动占满屏 */
+p,h3{
+  text-align: center ;
+}
+#middle{
+   width: 300px;
+   
+}
+#all{
+     margin:200px auto;
+     width: 1000px;
+}
+.content{
+   width: 300px;
+   float: left;
+   }
+img{
+  width:300px;
+  height:400px;
+}
+/* #left{
+   margin-bottom: 250px;
+} */
+/* 样式表 */
+</style>
+<script type="text/javascript">{
+/* js和html内容加载顺序谁先出谁先加载  写到哪里都可以
+很多时候写在最后加载一些动态效果 */
+
+	alert("正在加载")
+	window.onload=function(){}}
+	function text(){
+		//获取元素
+		var username = document.getElementById("user").value;//获取为imput元素
+		alert("输入的用户名是"+username.value);//提示框
+		var pwd = document.getElementById("pwd").value;//获取为imput元素
+		confirm("输入的用户名是"+pwd.value);//确认框
+		var repwd = document.getElementById("repwd").value;//获取为imput元素
+		var email = document.getElementById("email").value;//获取为imput元素
+		if(username == '')
+			{
+			var hh="请输入用户名";
+			alert(hh);
+			}
+		if(!(pwd == repwd))
+			{
+			var hh="密码输入错误";
+			alert(hh);
+			}
+	} 
+	</script>
+</head>
+<body>
+	<h1>>>表格表单整合</h1>
+<!-- 	  div 表示一块网页内容，会单独占一行 -->
+<!--       id：可以表示该元素的一种名陈，具有唯一性 -->
+<!--       class：元素的另一种名称，可以多个一起用 -->
+    <div id="all">
+	<div class="content" id="left">
+	<img alt="太装逼了  无法显示" src="9.jpg">
+	</div>
+	<div class="content" id="middle">
+	<h3>注册表单</h3>
+	<p>开心的写代码吧</p>
+	<form onsubmit = "text()"  action = "" method ="get">
+	<table>
+	<thead>
+		<tr>
+			<td>用户名：</td>
+			<td><input id="user" type="text"></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input id="pwd" type="password"></td>
+		</tr>
+		<tr>
+			<td>重复密码：</td>
+			<td><input id="repwd" type="password"></td>
+		</tr>
+		<tr>
+			<td>邮箱：</td>
+			<td><input id="email" type="email"></td>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td>男<input name="sex" type="radio"> 女<input name="sex"type="radio"></td>
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td>电影<input type="checkbox">游戏<input type="checkbox"></td>
+		</tr>
+		</thead>
+		<tfoot>
+		<tr>
+		<!--占两行-->
+			<th colspan="2" ><input  type="submit"  value="提交"></th>	
+		</tr>
+		</tfoot>
+	</table>
+</form>
+	</div>
+	<div class="content" id="right">
+	<img alt="太装逼了  无法显示" src="7.jpg">
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>
